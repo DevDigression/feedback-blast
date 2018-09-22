@@ -11,6 +11,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+// Middleware
 app.use(
 	cookieSession({
 		// 30 days calculated from milliseconds
@@ -21,6 +22,7 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+// end Middleware
 
 // equivalent to:
 // const authRoutes = require("./routes/authRoutes");
