@@ -22,7 +22,9 @@ passport.use(
 			clientID: keys.googleClientID,
 			clientSecret: keys.googleClientSecret,
 			// Must match with authorized redirect uri on Google Dev app setup:
-			callbackURL: "/auth/google/callback"
+			callbackURL: "/auth/google/callback",
+			// Necessary for GoogleStrategy to us https properly
+			proxy: true
 		},
 		(accessToken, refreshToken, profile, done) => {
 			// Query returns a promise (async)
