@@ -12,7 +12,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
-// Middleware
+/*****          Middleware         *****/
 app.use(bodyParser.json());
 
 app.use(
@@ -25,13 +25,26 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-// end Middleware
+/*****         end Middleware      *****/
 
+// Require routes and pass app from module.exports
 // equivalent to:
 // const authRoutes = require("./routes/authRoutes");
 // authRoutes(app);
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
+
+if (process.env.NODE_ENV === "production") {
+	// Express to serve production assets: main,js, main.css, etc
+	// by looking in client/build directory
+	app.use(express.static("client/build"));
+	// Express to serve index.html if it does not recognize the route
+	// (The server assumes the path is handled by React Router)
+	const path = require("path");
+	app.get("*", (req, res) => {
+		path.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+	});
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
