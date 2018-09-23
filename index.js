@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === "production") {
 	// (The server assumes the path is handled by React Router)
 	const path = require("path");
 	app.get("*", (req, res) => {
-		path.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+		res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 	});
 }
 
