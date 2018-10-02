@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { reduxForm } from "redux-form";
 import SurveyForm from "./SurveyForm";
 import SurveyFormReview from "./SurveyFormReview";
 
@@ -26,4 +27,8 @@ class NewSurvey extends Component {
 	}
 }
 
-export default NewSurvey;
+export default reduxForm({
+	// Leave destroyOnUnMount true by default to clear values when user
+	// navigates away from form (cancel, etc)
+	form: "surveyForm"
+})(NewSurvey);
