@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchSurveys } from "../../actions";
+import { fetchSurveys, deleteSurvey } from "../../actions";
 
 class SurveyList extends Component {
 	componentDidMount() {
@@ -23,6 +23,23 @@ class SurveyList extends Component {
 					<div className="card-action">
 						<a>Yes: {survey.yes}</a>
 						<a>No: {survey.no}</a>
+						<button
+							type="submit"
+							className="pink darken-1 btn-flat white-text"
+							onClick={() => {
+								if (
+									window.confirm(
+										`Are you sure that you want to delete this survey from your list?`
+									)
+								) {
+									this.props
+										.deleteSurvey(survey._id)
+										.then(() => this.props.fetchSurveys());
+								}
+							}}
+						>
+							Delete
+						</button>
 					</div>
 				</div>
 			);
@@ -38,4 +55,6 @@ function mapStateToProps({ surveys }) {
 	return { surveys };
 }
 
-export default connect(mapStateToProps, { fetchSurveys })(SurveyList);
+export default connect(mapStateToProps, { fetchSurveys, deleteSurvey })(
+	SurveyList
+);

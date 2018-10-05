@@ -84,4 +84,15 @@ module.exports = app => {
 			res.status(422).send(err);
 		}
 	});
+
+	app.delete("/api/surveys/:surveyId", (req, res) => {
+		Survey.findByIdAndRemove(req.params.surveyId)
+			.then(() => {
+				res.status(204).json({ message: "success" });
+			})
+			.catch(err => {
+				console.error(err);
+				res.status(500).json({ error: "unable to complete request" });
+			});
+	});
 };
