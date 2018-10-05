@@ -1,4 +1,5 @@
 import React from "react";
+import "../../css/SurveyForm.css";
 
 export default ({ input, label, meta: { error, touched } }) => {
 	return (
