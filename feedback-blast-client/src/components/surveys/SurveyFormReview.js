@@ -9,25 +9,29 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
 	const reviewFields = _.map(formFields, ({ name, label }) => {
 		return (
 			<div key={name}>
-				<label>{label}</label>
-				<div>{formValues[name]}</div>
+				<label style={{ padding: "20px 10px" }}>{label}</label>
+				<div style={{ padding: "20px 10px" }}>{formValues[name]}</div>
 			</div>
 		);
 	});
 
 	return (
-		<div>
-			<h5>Please review and confirm your entries</h5>
+		<div className="container" style={{ margin: "50px auto" }}>
+			<h5 style={{ margin: "20px auto" }}>
+				Please review and confirm your entries
+			</h5>
 			{reviewFields}
 			<button
-				className="yellow darken-3 btn-flat white-text"
+				className="pink darken-1 btn-flat white-text"
 				onClick={onCancel}
+				style={{ margin: "50px auto" }}
 			>
-				Back
+				Back<i className="material-icons right">backspace</i>
 			</button>
 			<button
 				onClick={() => submitSurvey(formValues, history)}
-				className="green btn-flat right white-text"
+				className="indigo btn-flat right white-text"
+				style={{ margin: "50px auto" }}
 			>
 				Send Survey
 				<i className="material-icons right">email</i>
