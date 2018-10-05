@@ -46,7 +46,7 @@ class Header extends Component {
 						className="left brand-logo"
 						style={{ margin: "0 20px" }}
 					>
-						Feedback Blast
+						<i className="material-icons">email</i>
 					</Link>
 					<ul className="right">{this.renderContent()}</ul>
 				</div>

@@ -2,7 +2,22 @@ label {
 	font-size: 24px;
 }
 
+input {
+	margin-bottom: 5px;
+}
+
 input:focus {
 	border-bottom: 1px solid #303f9f !important;
 	box-shadow: 0 1px 0 0 #303f9f !important;
+}
+
+.error-msg {
+	margin-bottom: 20px;
+}
+
+.form-container {
+	margin: 40px auto;
+}
+
+@media only screen and (max-width: 768px) {
 }
