@@ -11,7 +11,15 @@ class Header extends Component {
 			case false:
 				return (
 					<li>
-						<a href="/auth/google">Login With Google</a>
+						<a
+							href="/auth/google"
+							style={{ backgroundColor: "transparent" }}
+						>
+							<img
+								src={require("../img/btn_google_signin_light_normal_web.png")}
+								style={{ margin: "10px auto" }}
+							/>
+						</a>
 					</li>
 				);
 			default:
@@ -19,7 +27,7 @@ class Header extends Component {
 					<li key="1">
 						<Payments />
 					</li>,
-					<li key="2" style={{ margin: "0 10px" }}>
+					<li key="2" style={{ margin: "0 20px" }}>
 						Credits: {this.props.auth.credits}
 					</li>,
 					<li key="3">
@@ -32,10 +40,11 @@ class Header extends Component {
 	render() {
 		return (
 			<nav>
-				<div className="nav-wrapper">
+				<div className="nav-wrapper indigo darken-2">
 					<Link
 						to={this.props.auth ? "/surveys" : "/"}
 						className="left brand-logo"
+						style={{ margin: "0 20px" }}
 					>
 						Feedback Blast
 					</Link>
