@@ -3,6 +3,7 @@ import _ from "lodash";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import SurveyField from "./SurveyField";
+import EmailBody from "./EmailBody";
 import validateEmails from "../../utils/validateEmails";
 import formFields from "./formFields";
 import "../../css/SurveyForm.css";
@@ -10,6 +11,17 @@ import "../../css/SurveyForm.css";
 class SurveyForm extends Component {
 	renderFields() {
 		return _.map(formFields, ({ label, name }) => {
+			if (name === "body") {
+				return (
+					<Field
+						key={name}
+						component={EmailBody}
+						type="textarea"
+						label={label}
+						name={name}
+					/>
+				);
+			}
 			return (
 				<Field
 					key={name}
