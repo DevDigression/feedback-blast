@@ -19,5 +19,11 @@ input:focus {
 	margin: 40px auto;
 }
 
+.card-action button {
+	display: inline-block;
+	float: right;
+	margin: 0 auto;
+}
+
 @media only screen and (max-width: 768px) {
 }
