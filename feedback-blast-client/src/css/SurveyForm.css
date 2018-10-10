@@ -11,6 +11,16 @@ input:focus {
 	box-shadow: 0 1px 0 0 #303f9f !important;
 }
 
+textarea {
+	height: 200px;
+	margin-top: 15px;
+}
+
+textarea:focus {
+	border: 1px solid #303f9f !important;
+	box-shadow: 0 1px 0 0 #303f9f !important;
+}
+
 .error-msg {
 	margin-bottom: 20px;
 }
