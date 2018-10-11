@@ -1,14 +1,61 @@
-.landing-page img {
-	width: 400px;
+.landing-page header {
+	margin-bottom: 100px;
 }
 
 .landing-section {
 	display: block;
 	width: 100%;
 	padding: 50px;
+	margin: 50px auto;
 	clear: both;
 }
 
-.landing-seciton ul {
+.landing-image {
+	width: 45%;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.landing-image img {
+	width: 100%;
+}
+
+.landing-text {
+	width: 45%;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.landing-text p {
+	font-size: 24px;
+}
+
+.landing-text ul {
 	list-style: none;
+	padding: 0;
+}
+
+.landing-text li {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+	.landing-image,
+	.landing-text {
+		width: 100%;
+		display: block;
+		float: none;
+		clear: both;
+		margin-bottom: 20px;
+	}
+
+	.landing-image img {
+		width: 100%;
+	}
+
+	.landing-text li {
+		font-size: 24px;
+	}
 }
