@@ -32,17 +32,27 @@ const Landing = props => {
 				</div>
 			</div>
 			<div className="landing-section">
-				<div className="landing-image right">
+				<div
+					className="landing-image right"
+					style={{ marginTop: "150px" }}
+				>
 					<img src={require("../img/survey-data.jpg")} />
 				</div>
 				<div className="landing-text">
 					<ul>
 						<li>
+							<i className="material-icons large">announcement</i>
 							Send surveys to a list of up to 100 recipients at a
 							time
 						</li>
-						<li>Seamlessly collect feedback data</li>
-						<li>Stay focused on priority areas</li>
+						<li>
+							<i className="material-icons large">assessment</i>
+							Seamlessly collect feedback data
+						</li>
+						<li>
+							<i className="material-icons large">build</i>
+							Stay focused and work on priority areas
+						</li>
 					</ul>
 				</div>
 			</div>

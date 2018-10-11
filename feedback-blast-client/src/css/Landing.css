@@ -5,7 +5,7 @@
 .landing-section {
 	display: block;
 	width: 100%;
-	padding: 50px;
+	padding: 20px;
 	margin: 50px auto;
 	clear: both;
 }
@@ -24,7 +24,10 @@
 	width: 45%;
 	display: inline-block;
 	margin: 0 auto;
-	text-align: center;
+}
+
+.landing-text i {
+	display: block;
 }
 
 .landing-text p {
@@ -33,12 +36,14 @@
 
 .landing-text ul {
 	list-style: none;
+	text-align: left;
 	padding: 0;
 }
 
 .landing-text li {
 	font-size: 32px;
 	font-weight: bold;
+	padding-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -57,5 +62,10 @@
 
 	.landing-text li {
 		font-size: 24px;
+		text-align: center;
+	}
+
+	.landing-text i {
+		margin: 0 auto;
 	}
 }
