@@ -1,0 +1,14 @@
+.landing-page img {
+	width: 400px;
+}
+
+.landing-section {
+	display: block;
+	width: 100%;
+	padding: 50px;
+	clear: both;
+}
+
+.landing-seciton ul {
+	list-style: none;
+}
