@@ -8,6 +8,7 @@
 
 .landing-page header h1 {
 	font-size: 60px;
+	font-weight: bold;
 }
 
 .landing-page header h1:after {
@@ -28,6 +29,7 @@
 
 .landing-page header span {
 	color: #303f9f;
+	font-weight: bold;
 }
 
 .landing-section {
