@@ -1,12 +1,40 @@
+.landing-page {
+	color: #333;
+}
+
 .landing-page header {
 	margin-bottom: 100px;
+}
+
+.landing-page header h1 {
+	font-size: 60px;
+}
+
+.landing-page header h1:after {
+	position: absolute;
+	left: 50%;
+	height: 4px;
+	margin-left: -155px;
+	margin-top: 90px;
+	width: 300px;
+	content: "";
+	background: #303f9f;
+}
+
+.landing-page header h2 {
+	font-size: 40px;
+	padding: 30px;
+}
+
+.landing-page header span {
+	color: #303f9f;
 }
 
 .landing-section {
 	display: block;
 	width: 100%;
 	padding: 20px;
-	margin: 50px auto;
+	margin: 100px auto;
 	clear: both;
 }
 

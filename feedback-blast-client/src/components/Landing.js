@@ -11,7 +11,16 @@ const Landing = props => {
 		<div className="landing-page" style={{ textAlign: "center" }}>
 			<header>
 				<h1>Feedback Blast</h1>
-				<h2>Blast Surveys, Boost Results</h2>
+				<h2>
+					<span>
+						<em>Blast</em>
+					</span>{" "}
+					Surveys,{" "}
+					<span>
+						<em>Boost</em>
+					</span>{" "}
+					Results
+				</h2>
 			</header>
 			<div className="landing-section">
 				<div className="landing-image left">
